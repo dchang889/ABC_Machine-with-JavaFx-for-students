@@ -15,17 +15,16 @@ public class Word {
 
 
 	private String CheckValidity(String s) {
-		if (s.matches("\\w+")) //One word only filter
+		if (s.matches("^\\b[a-zA-Z]+\\b$"))
 		{
 			value = doValue(s);
 			return s;
 		}
 		else 
 		{
-			return "Your word had a space, symbol, and or number in it ¯\\_(~.~)_/¯";
+			return null;
 		}
 	}
-
 
 	private int doValue(String s) {
 		String temp = s.toLowerCase();
